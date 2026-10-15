@@ -79,7 +79,7 @@ class LinkedList<T> implements ILinkedList<T> {
 
     const addToArray = (node: Node<T>): T[] => {
       array.push(node.data);
-      return node.next ? addToArray(node.next): array;
+      return node.next ? addToArray(node.next) : array;
     };
 
     return addToArray(this.head);
@@ -92,17 +92,17 @@ class LinkedList<T> implements ILinkedList<T> {
 
 interface Post {
   title: string;
+  subject?: string;
 }
 
 const linkedList = new LinkedList<Post>();
 
 // Usage
 
-linkedList.traverse(); // [];
-console.log(linkedList.insertAtEnd({ title: 'Post A' }));
-console.log(linkedList.insertAtEnd({ title: 'Post B' }));
-console.log(linkedList.insertInBegin({ title: 'Post C' }));
-console.log(linkedList.insertInBegin({ title: 'Post D' }));
-
+console.log(linkedList.insertInBegin({ title: 'Post 1', subject: 'Subject 1' }));
+console.log(linkedList.insertInBegin({ title: 'Post 2', subject: 'Subject 2' }));
+console.log(linkedList.insertInBegin({ title: 'Post 3', subject: 'Subject 3' }));
+console.log(linkedList.insertInBegin({ title: 'Post 4', subject: 'Subject 4' }));
+console.log(linkedList.insertInBegin({ title: 'Post 5', subject: 'Subject 5' }));
+console.log(linkedList.size());
 console.log(linkedList.traverse());
-console.log(linkedList.search(({ title }) => title === 'Post A'))
