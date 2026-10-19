@@ -103,6 +103,6 @@ console.log(linkedList.insertInBegin({ title: 'Post 1', subject: 'Subject 1' }))
 console.log(linkedList.insertInBegin({ title: 'Post 2', subject: 'Subject 2' }));
 console.log(linkedList.insertInBegin({ title: 'Post 3', subject: 'Subject 3' }));
 console.log(linkedList.insertInBegin({ title: 'Post 4', subject: 'Subject 4' }));
-console.log(linkedList.insertInBegin({ title: 'Post 5', subject: 'Subject 5' }));
+console.log(linkedList.insertAtEnd({ title: 'Post 5', subject: 'Subject 5' }));
 console.log(linkedList.size());
 console.log(linkedList.traverse());
